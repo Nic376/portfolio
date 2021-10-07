@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import ThemeSelect from './main/components/ThemeSelect';
+import configureStore from './main/reducers/configureStore';
+
+const store = configureStore()
 
 const App = () => {
   return (
-    <div>
-      App reacct
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <h1>App react</h1>
+        <ThemeSelect />
+      </div>
+    </Provider>
   );
 }
 
