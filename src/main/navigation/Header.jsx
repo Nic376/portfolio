@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, makeStyles } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import ThemeSelect from '../components/ThemeSelect'
 
 const useStyles = makeStyles(() => ({
         container: {
@@ -35,6 +36,7 @@ const Header = () => {
                     
                     <Link to="/resume" className={classes.link}>Resume</Link>
                 </div>
+                <ThemeSelect/>
             </AppBar>
         </div>
     )
