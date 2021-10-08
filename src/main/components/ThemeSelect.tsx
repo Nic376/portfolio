@@ -4,18 +4,31 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
+import { toggleTheme } from '../Theme/actions/themeActions';
+import { getTheme } from '../Theme/selectors/themeSelector';
 
 export enum SupportedThemes {
-    LIGHT,
-    DARK
+    LIGHT = "LIGHT",
+    DARK = "DARK"
 }
 
-const ThemeSelect = () => {
+interface Props {
+  theme: SupportedThemes
+  actions: {
+    toggleTheme: (theme: SupportedThemes) => void
+  }
+}
+
+const ThemeSelect = (props: Props) => {
     const [theme, setTheme] = useState<SupportedThemes>(SupportedThemes.DARK)
     const [open, setOpen] = useState(false);
 
     const handleChange = (event: any) =>{
-        setTheme(event.target.value)
+      const newTheme = event.target.value
+        setTheme(newTheme)
+        props.actions.toggleTheme(newTheme)
     }
   
     const handleClose = () => {
@@ -51,42 +64,17 @@ const ThemeSelect = () => {
     );
   }
 
-export default ThemeSelect
+const mapStateToProps = (state: any) => {
+  return {
+    theme: getTheme(state)
+  }
+}
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    actions:bindActionCreators({
+      toggleTheme: toggleTheme,
+    }, dispatch)
+  }
+}
 
-
-// -------------------------------------------------------------------------------------------------------------
-// import { Box, FormControl, InputLabel, MenuItem, Select } from "@material-ui/core"
-// import React, { useState } from "react"
-
-// export enum SupportedThemes {
-//   LIGHT, 
-//   DARK
-// }
-
-// const ThemeSelect = () => {
-//   const [theme, setTheme] = useState<SupportedThemes>(SupportedThemes.LIGHT)
-
-//   const handleChange = (event:any) => {
-//     setTheme(event.target.value)
-//   }
-
-//   return (
-//     <Box sx={{ minWidth: 120 }}>
-//       <FormControl>
-//         <InputLabel id="demo-simple-select-label">Theme</InputLabel>
-//         <Select
-//         labelId="demo-simple-select-label"
-//         id="demon-simple-select"
-//         value={theme}
-//         label="Theme"
-//         onChange={handleChange}
-//         >
-//           <MenuItem value={SupportedThemes.LIGHT}>Light</MenuItem>
-//           <MenuItem value={SupportedThemes.DARK}>Dark</MenuItem>
-//         </Select>
-//       </FormControl>
-//     </Box>
-//   )
-// }
-
-// export default ThemeSelect
+export default connect(mapStateToProps, mapDispatchToProps)(ThemeSelect)

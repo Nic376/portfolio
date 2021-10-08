@@ -1,4 +1,4 @@
-import { SupportedThemes } from "../components/ThemeSelect";
+import { SupportedThemes } from "../../components/ThemeSelect";
 
 export const toggleTheme = (theme: SupportedThemes) => {
      return async (dispatch: Function) => {

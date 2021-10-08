@@ -3,7 +3,7 @@ import { SupportedThemes } from '../components/ThemeSelect'
 type Action = { type: string }
 
 const initialState: { theme: SupportedThemes } = {
-    theme: SupportedThemes.LIGHT
+    theme: SupportedThemes.DARK
 }
 
 const themeReducer = (
