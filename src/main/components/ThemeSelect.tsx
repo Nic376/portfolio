@@ -23,12 +23,14 @@ interface Props {
 
 const ThemeSelect = (props: Props) => {
     const [theme, setTheme] = useState<SupportedThemes>(SupportedThemes.DARK)
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false)
+    const [colors, setColors] = useState({})
 
     const handleChange = (event: any) =>{
       const newTheme = event.target.value
         setTheme(newTheme)
         props.actions.toggleTheme(newTheme)
+        changeColors()
     }
   
     const handleClose = () => {
@@ -38,6 +40,19 @@ const ThemeSelect = (props: Props) => {
     const handleOpen = () => {
       setOpen(true);
     };
+
+    const changeColors = () => {
+      const getColors = document.querySelector<HTMLElement>(':root')!;
+      if(props.theme === "DARK") {
+        getColors.style.setProperty('--primary', '#00588F')
+        getColors.style.setProperty('--secondary', '#E0A451')
+        getColors.style.setProperty('--text', '#ffffff')
+      } else {
+        getColors.style.setProperty('--primary', '#E0A451')
+        getColors.style.setProperty('--secondary', '#00588F')
+        getColors.style.setProperty('--text', '#000000')
+      }
+    }
   
     return (
       <div>
