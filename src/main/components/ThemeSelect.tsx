@@ -41,11 +41,11 @@ const ThemeSelect = (props: Props) => {
   
     return (
       <div>
-        <Button sx={{ display: 'block', mt: 2 }} onClick={handleOpen}>
+        <Button sx={{ mt: 2 }} onClick={handleOpen}>
           Thème
         </Button>
         <FormControl sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="controlled-open-select-label"></InputLabel>
+          <InputLabel id="controlled-open-select-label" ></InputLabel>
           <Select
             labelId="controlled-open-select-label"
             id="controlled-open-select"
@@ -55,6 +55,7 @@ const ThemeSelect = (props: Props) => {
             value={theme}
             label="Theme"
             onChange={handleChange}
+            sx={{ height: 50 }}
           >
             <MenuItem value={SupportedThemes.LIGHT}>Light</MenuItem>
             <MenuItem value={SupportedThemes.DARK}>Dark</MenuItem>

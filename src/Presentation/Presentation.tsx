@@ -1,11 +1,10 @@
 import React from "react"
-import getClass from "../main/navigation/AppNavigator"
 
 const PresentationScreen = () => {
 
     return (
         <div>
-            Presentation Nic.
+            <img src="pexels-pixabay-268533.jpg" alt="arbre nuit reflection" />
         </div>
     )
 }

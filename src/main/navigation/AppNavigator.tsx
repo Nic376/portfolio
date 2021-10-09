@@ -1,6 +1,9 @@
 import { Switch, Route } from "react-router"
 import React from "react"
 import PresentationScreen from "../../Presentation/Presentation"
+import ContactScreen from "../../Presentation/Contact"
+import ProjetsScreen from "../../Presentation/Projets"
+import ResumeScreen from "../../Presentation/Resume"
 import { connect } from "react-redux"
 import { getTheme } from "../Theme/selectors/themeSelector";
 import { SupportedThemes } from "../components/ThemeSelect";
@@ -40,24 +43,23 @@ const AppNavigator = (props: Props) => {
                 </div>
             </Route>
 
-            <Route exact path="/contact">
+            <Route exact path="/resume">
                 <div className={getClass()}>
-                    contact
+                    <ResumeScreen />
                 </div>
             </Route>
 
             <Route exact path="/projets">
                 <div className={getClass()}>
-                    projets
+                    <ProjetsScreen />
                 </div>
             </Route>
 
-            <Route exact path="/resume">
+            <Route exact path="/contact">
                 <div className={getClass()}>
-                    Resume
+                    <ContactScreen />
                 </div>
             </Route>
-
         </Switch>
     )
 }
