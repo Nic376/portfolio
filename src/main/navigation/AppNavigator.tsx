@@ -20,8 +20,8 @@ const useStyles = makeStyles(() => ({
             color: BasicThemes.colors.secondary,
     },
     DARK: {
-            backgroundColor: BasicThemes.colors.secondary,
-            color: BasicThemes.colors.primary,
+            // backgroundColor: BasicThemes.colors.secondary,
+            // color: BasicThemes.colors.primary,
     }
 }))
 const AppNavigator = (props: Props) => {
