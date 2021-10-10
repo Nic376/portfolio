@@ -13,18 +13,22 @@ interface Props {
 
 
 const ContactScreen = (props: Props) => {
-    const phoneText = "La meilleur façon de me rejoindre c'est de me contacter directment par telephone"
+    const phoneText = "La meilleur façon de me rejoindre c'est de me contacter directement par telephone"
     const emailText = "Vous pouvez aussi prendre la chance de m'envoyer un courriel"
 
     return (
-        <div>
+        <>
+            <h1>Me contacter</h1>
+            <h2>Nicolas Tremblay</h2>
             <div>
-                <ContactCard source={phone} titre="581-996-5716" texte={phoneText} styleClass="card-img-top phone" />
+                <div>
+                    <ContactCard source={phone} titre="581-996-5716" texte={phoneText} styleClass="card-img-top img-contact-phone" />
+                </div>
+                <div className="pt-5 mt-5">
+                    <ContactCard source={courriel} titre="Nick376@hotmail.fr" texte={emailText} styleClass="card-img-top img-contact-courriel" />
+                </div>
             </div>
-            <div className="pt-5 mt-5">
-                <ContactCard source={courriel} titre="Nick376@hotmail.fr" texte={emailText} styleClass="card-img-top courriel" />
-            </div>
-        </div>
+        </>
     )
 }
 

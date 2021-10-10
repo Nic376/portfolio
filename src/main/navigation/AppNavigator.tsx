@@ -48,9 +48,7 @@ const AppNavigator = (props: Props) => {
             </Route>
 
             <Route exact path="/resume">
-                <div className={getClass()}>
                     <ResumeScreen />
-                </div>
             </Route>
 
             <Route exact path="/projets">
