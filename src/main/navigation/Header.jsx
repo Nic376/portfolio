@@ -24,6 +24,7 @@ const useStyles = makeStyles(() => ({
             padding: "0 50px",
             fontSize: "28px",
             textDecoration: "none",
+            color: "#000000"
         }
     })
 )

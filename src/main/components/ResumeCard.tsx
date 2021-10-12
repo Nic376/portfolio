@@ -13,7 +13,7 @@ import imgPhotographe from "../../images/Me.jpg";
 // const ResumeCard = ( props: Props ) => {
     const ResumeCard = () => {
     return (
-        <div className="wrapper mb-5">
+        <div className="wrapper pb-5">
             <h1 className="text-center">Mon curriculum vitae</h1>
             <h2 className="mt-4 text-center">Expérience professionnelle</h2>
             <div className="resumeContainer">

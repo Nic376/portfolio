@@ -6,8 +6,7 @@ const ResumeScreen = () => {
     // const texteFantassin = "Fantassin et chef d’équipage 2000-2011"
 
     return (
-        <div>
-            {/* <ResumeCard source={imgFantassin} titre="Fantassin et chef d'équipage" texte={texteFantassin} styleClass="card-img-top img-resume-fantassin" /> */}
+        <div className="resume-bg">
             <ResumeCard />
         </div>
     )
