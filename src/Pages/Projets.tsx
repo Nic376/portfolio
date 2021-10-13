@@ -19,16 +19,16 @@ const ProjetsScreen = () => {
     }
 
         return (
-                <div className="mb-5 wrapper row gx-5 h-100">
+            <div className="blur-bg">
+                <div className="mb-5 wrapper row gx-5 h-100 paddingtop">
+                    <h1 className="py-5 text-center">Mes projets</h1>
+
                     {projects.map((project: any) => (
                         <ProjectCard source={nextImg(project)} project={project.project} cours={project.cours} note={project.note} techno={project.techno} lien={project.lien} git={project.git} />
                     ))}
                 </div>
+            </div>
             )
 }
 
 export default ProjetsScreen
-
-// {Object.keys(projects).forEach((key) => {
-//     <ProjectCard source={projects[key].source} project={projects[key].project} cours={projects[key].cours} note={projects[key].note} techno={projects[key].techno} lien={projects[key].lien} git={projects[key].git} />
-// })}

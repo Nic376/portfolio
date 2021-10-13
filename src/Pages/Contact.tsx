@@ -17,18 +17,20 @@ const ContactScreen = (props: Props) => {
     const emailText = "Vous pouvez aussi prendre la chance de m'envoyer un courriel"
 
     return (
-        <>
-            <h1>Me contacter</h1>
-            <h2>Nicolas Tremblay</h2>
-            <div>
-                <div>
+        <div className="blur-bg text-center height-vh">
+    
+            <h1 className="py-5 text-center ">Me contacter</h1>
+          
+            <div className="wrapper text-center ">
+                <h2>Nicolas Tremblay</h2>
+                <div className="contactMargin">
                     <ContactCard source={phone} titre="581-996-5716" texte={phoneText} styleClass="card-img-top img-contact-phone" />
                 </div>
-                <div className="pt-5 mt-5">
+                <div className="courrielMargin">
                     <ContactCard source={courriel} titre="Nick376@hotmail.fr" texte={emailText} styleClass="card-img-top img-contact-courriel" />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

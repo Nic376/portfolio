@@ -13,9 +13,16 @@ import imgPhotographe from "../../images/Me.jpg";
 // const ResumeCard = ( props: Props ) => {
     const ResumeCard = () => {
     return (
-        <div className="wrapper pb-5">
-            <h1 className="text-center">Mon curriculum vitae</h1>
-            <h2 className="mt-4 text-center">Expérience professionnelle</h2>
+        <div className="wrapper pb-5 paddingtop">
+
+            <h1 className="pt-5 text-center">Mon curriculum vitae</h1>
+
+            <div className="resumeContainer-small pt-5">
+                <div className="card col row align-content-center" >
+                    <h2 className="card-text text-center my-4">Expérience professionnelle</h2>
+                </div>
+            </div>
+
             <div className="resumeContainer">
                 <div className="card col row align-content-center" >
                     <img src={imgPhotographe} className="card-img-top img-resume-fantassin align-self-center" alt="" />
@@ -62,9 +69,9 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Formation professionnelle </h3>
-                        <h4 className="text-center mb-3">(Formations données par les Forces armées canadiennes) </h4>
+                    <h3 className="card-text text-center my-4">Formation professionnelle </h3>
+                    <h4 className="text-center mb-3">(Formations données par les Forces armées canadiennes) </h4>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Cours de représentant des affaires publiques</li>
                             <li>Cours de technicien en imagerie (photo et vidéo)</li>
@@ -82,8 +89,8 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Formation académique </h3>
+                    <h3 className="card-text text-center my-4">Formation académique </h3>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Attestation d’étude collégiale – Développement Web (en cours) 2022</li>
                             <p>Cégep Garneau</p>
@@ -96,12 +103,12 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Compétences</h3>
+                    <h3 className="card-text text-center my-4">Compétences</h3>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Bilingue (anglais et français)</li>
                             <li>Instructeur snowboard niveau 1</li>
-                            <li>CDéveloppement web et programmation (HTML5, CSS3, JavaScript, JQuery, SQL, PHP, React)</li>
+                            <li>Développement web et programmation (HTML5, CSS3, JavaScript, JQuery, SQL, PHP, React)</li>
                             <li>Excellentes connaissances informatiques : Suite Microsoft (Word, Excel, PowerPoint, Outlook), Suite Adobe (Photoshop, Lightroom, Illustrator, Premier Pro, After Effects, Audible), plateforme de streaming (OBS, YouTube, Facebook, Twitch)</li>
                         </ul>
                     </div>
@@ -110,8 +117,8 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Traits personnels</h3>
+                    <h3 className="card-text text-center my-4">Traits personnels</h3>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Autonome</li>
                             <li>Résolution de problèmes</li>
@@ -125,8 +132,8 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Activités et loisirs</h3>
+                    <h3 className="card-text text-center my-4">Activités et loisirs</h3>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Snowboard</li>
                             <li>vélo montagne</li>
@@ -140,10 +147,10 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Missions à l’étranger</h3>
+                    <h3 className="card-text text-center my-4">Missions à l’étranger</h3>
+                    <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <p>Op Athena – Afghanistan 2004, 2007 et 2009</p>
+                            <li>Op Athena – Afghanistan 2004, 2007 et 2009</li>
                         </ul>
                     </div>
                 </div>

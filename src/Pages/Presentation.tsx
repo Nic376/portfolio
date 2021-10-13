@@ -4,12 +4,11 @@ const PresentationScreen = () => {
 
     return (
         <div className="presentation-bg">
-            <div className="text-white text-center">
+            <div className="text-white text-center paddingtop">
                 <h1 className="pt-5">Nicolas Tremblay</h1>
                 <h2 className="mt-3">Mon Portfolio, </h2>
-                <h3>Un Univers à découvrir</h3>
+                <h3>et un Univers à découvrir</h3>
             </div>
-  
         </div>
     )
 }

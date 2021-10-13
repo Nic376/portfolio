@@ -2,6 +2,7 @@ import React from 'react'
 import { AppBar, makeStyles } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import ThemeSelect from '../components/ThemeSelect'
+import logo from "../../images/Nicky_Logo.svg"
 
 const useStyles = makeStyles(() => ({
         container: {
@@ -14,17 +15,20 @@ const useStyles = makeStyles(() => ({
             flexDirection:"row",
             justifyContent:"space-between",
             alignItems: "center",
-            backgroundColor: "rgba(0,0,0,0)"
+            backgroundImage: "linear-gradient(var(--primary), rgba(255, 255, 255, 1))"
         },
         main: {
-            paddingRight: "10px",
-            color: "#000000"
+            paddingLeft: "10px",
         },
         link: {
             padding: "0 50px",
+            fontFamily: "DM Serif Display, serif",
             fontSize: "28px",
             textDecoration: "none",
             color: "#000000"
+        }, 
+        logo: {
+            width: "200px"
         }
     })
 )
@@ -34,13 +38,13 @@ const Header = () => {
     return (
         <div className={classes.container}>
             <AppBar className={classes.sections} position="relative">
-                <div >
-                    <Link to="/" className={classes.main}>App React</Link>
+                <div>
+                    <Link to="/" className={classes.main}><img src={logo} alt="logo" className={classes.logo} /></Link>
                 </div>
                 <div className={classes.link}>
                     <Link to="/resume" className={classes.link}>Resume</Link>
 
-                    <Link to="/projets" className={classes.link}>Projet</Link>
+                    <Link to="/projets" className={classes.link}>Projets</Link>
 
                     <Link to="/contact" className={classes.link}>Contact</Link>
                 </div>

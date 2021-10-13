@@ -9,11 +9,11 @@ interface Props {
 
 const ContactCard = ( props: Props ) => {
     return (    
-        <div className="wrapper phoneContainer">
-            <div className="card col-6 offset-sm-2" >
-                <img src={props.source} className={props.styleClass} alt="telephone cellulaire" />
+        <div className="wrapper phoneContainer row justify-content-center contactMargin">
+            <div className="card col-md-6 height" >
+                <img src={props.source} className={props.styleClass} alt="" />
                 <h2 className="numero">{props.titre}</h2>
-                <div className="card-body">
+                <div className="card-body height">
                     <p className="card-text">{props.texte} </p>
                 </div>
             </div>

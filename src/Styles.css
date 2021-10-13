@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 :root {
     --primary: #00588F;
     --secondary: #E0A451;
@@ -8,24 +10,43 @@ a {
     color: var(--text);
 }
 
+h1{
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    color: #fff;
+}
+
+.border-h1 {
+    border-bottom: 5px solid var(--secondary);
+    border-radius: 15px;
+}
+
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
 }
 
+.paddingtop{
+    padding-top: 100px;
+}
+
 .presentation-bg {
-    height: 100vh;
+    height: 101vh;
     background-image: url("./images/pars-sahin-V7uP-XzqX18-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: 100% 50%, center; */
-    background-position: 100% 50%;
+    background-position: center;
     background-attachment: fixed;
     background-origin: center;
+    margin-top: -95px;
 }
 
-.resume-bg {
-    /* height: 100vh; */
+.height-vh {
+    height: 100vh;
+}
+
+.blur-bg {
     background-image: url("./images/pars-sahin-V7uP-XzqX18-unsplash-blur.jpg");
     background-size: cover;
     background-repeat: repeat-y;
@@ -33,6 +54,9 @@ a {
     background-position: 100% 50%;
     background-attachment: fixed;
     background-origin: center;
+    padding-bottom: 25px;
+    margin-top: -95px;
+    /* padding-top: ; */
 }
 
 .resumeContainer {
@@ -52,10 +76,12 @@ a {
     height: 25px;
 }
 
-.bg {
-    background-color: var(--primary);
-    border: 2px solid var(--secondary);
-    color: var(--text);
+.contactMargin {
+    padding-top: 45px;
+}
+
+.courrielMargin {
+    padding-top: 25%;
 }
 
 .card {
@@ -66,8 +92,12 @@ a {
     border-radius: 15px;
 }
 
+.height {
+    height: 150px;
+}
+
 .img-contact-phone {
-    max-height: 250px;
+    height: 65%;
     margin: -25% 0 0 -38% ;
     filter: drop-shadow(5px 6px 15px rgba(0, 0, 0,0.5));
 }
@@ -77,7 +107,7 @@ a {
 }
 
 .img-contact-courriel {
-    max-width: 25%;
+    width: 25%;
     margin: -10% 0 0 0;
     padding: 0 0 5% 0;
     filter: drop-shadow(5px 6px 15px rgba(0, 0, 0,0.5));
@@ -104,3 +134,29 @@ a {
     margin-top: 25px;
     border-top: 4px solid var(--secondary);
 }
+
+/* .container {
+    margin:0,
+}
+
+.sections {
+    padding: 8px;
+    flex: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+}
+
+.main {
+    padding-right: 10px;
+    color: #000000;
+}
+
+.link {
+    padding: 0 50px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #000000;
+} */
