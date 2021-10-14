@@ -55,12 +55,12 @@ const ThemeSelect = (props: Props) => {
     }
   
     return (
-      <div>
-        <Button sx={{ mt: 2 }} onClick={handleOpen}>
+      <div className="row theme-div">
+        <Button sx={{ mt: 2 }} onClick={handleOpen} className="theme-button">
           Thème
         </Button>
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="controlled-open-select-label" ></InputLabel>
+        <FormControl className="theme-form ">
+          <InputLabel id="controlled-open-select-label " ></InputLabel>
           <Select
             labelId="controlled-open-select-label"
             id="controlled-open-select"

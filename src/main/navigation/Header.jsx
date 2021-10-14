@@ -6,16 +6,17 @@ import logo from "../../images/Nicky_Logo.svg"
 
 const useStyles = makeStyles(() => ({
         container: {
-            margin:0,
+            margin: "0 auto",
         },
         sections: {
+            margin: "0 auto",
             padding: "8px",
             flex: 1,
             display:"flex",
             flexDirection:"row",
             justifyContent:"space-between",
             alignItems: "center",
-            backgroundImage: "linear-gradient(var(--primary), rgba(255, 255, 255, 1))"
+            backgroundImage: "linear-gradient(var(--primary), rgba(255, 255, 255, 0))"
         },
         main: {
             paddingLeft: "10px",

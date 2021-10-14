@@ -11,9 +11,25 @@ a {
 }
 
 h1{
-    font-family: 'DM Serif Display', serif;
     font-size: 64px;
-    color: #fff;
+}
+
+h2{
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    text-decoration: none;
+    max-height: 50px
+}
+
+.color-text {
+    color: var(--text);
+}
+
+.full-vh {
+    height: 100vh;
+}
+.dm-display {
+    font-family: 'DM Serif Display', serif;
 }
 
 .border-h1 {
@@ -34,12 +50,12 @@ h1{
     height: 101vh;
     background-image: url("./images/pars-sahin-V7uP-XzqX18-unsplash.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     /* background-position: 100% 50%, center; */
     background-position: center;
     background-attachment: fixed;
     background-origin: center;
-    margin-top: -95px;
+    margin-top: -120px;
 }
 
 .height-vh {
@@ -55,7 +71,7 @@ h1{
     background-attachment: fixed;
     background-origin: center;
     padding-bottom: 25px;
-    margin-top: -95px;
+    margin-top: -120px;
     /* padding-top: ; */
 }
 
@@ -97,13 +113,17 @@ h1{
 }
 
 .img-contact-phone {
-    height: 65%;
-    margin: -25% 0 0 -38% ;
+    height: 140%;
+    margin: -22% 0 0 -85% ;
     filter: drop-shadow(5px 6px 15px rgba(0, 0, 0,0.5));
 }
 
 .numero {
     margin: -15% 0 3% 30%;
+}
+
+.cellNumber {
+    margin-left: -4%;
 }
 
 .img-contact-courriel {
@@ -135,28 +155,40 @@ h1{
     border-top: 4px solid var(--secondary);
 }
 
-/* .container {
-    margin:0,
+.theme-button {
+    color: black !important;
 }
 
-.sections {
-    padding: 8px;
-    flex: 1;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0,0,0,0);
+.theme-div {
+    margin-right: 15px;
 }
 
-.main {
-    padding-right: 10px;
-    color: #000000;
+.theme-form {
+    max-height: 50px;
+    max-width: 150px;
 }
 
-.link {
-    padding: 0 50px;
-    font-size: 28px;
-    text-decoration: none;
-    color: #000000;
-} */
+.theme-select {
+    background-color: red;
+}
+
+.constellation {
+    max-height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.constellation-wrapper {
+    margin-left: 8%;
+    margin-top: 50px;
+    max-height: 500px;
+}
+
+.constellation-hover {
+    opacity: 25%;
+    max-height: 500px;
+}
+
+.constellation-hover:hover {
+    opacity: 100%;
+}

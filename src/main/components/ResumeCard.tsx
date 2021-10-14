@@ -1,25 +1,18 @@
 import React from 'react'
 import imgFantassin from "../../images/pfoto nic.jpg";
 import imgPhotographe from "../../images/Me.jpg";
-
-
-// interface Props {
-//     source: any,
-//     titre: string,
-//     texte: string,
-//     styleClass: string
-// }
-
-// const ResumeCard = ( props: Props ) => {
+import { useTranslation, withTranslation } from "react-i18next";
     const ResumeCard = () => {
+    const { t } = useTranslation("pageResume")
+
     return (
         <div className="wrapper pb-5 paddingtop">
 
-            <h1 className="pt-5 text-center">Mon curriculum vitae</h1>
+            <h1 className="pt-5 text-center color-text">{t("h1")}</h1>
 
             <div className="resumeContainer-small pt-5">
                 <div className="card col row align-content-center" >
-                    <h2 className="card-text text-center my-4">Expérience professionnelle</h2>
+                    <h2 className="card-text text-center my-4 ">{t("expPro")}</h2>
                 </div>
             </div>
 
@@ -27,21 +20,21 @@ import imgPhotographe from "../../images/Me.jpg";
                 <div className="card col row align-content-center" >
                     <img src={imgPhotographe} className="card-img-top img-resume-fantassin align-self-center" alt="" />
                     <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Technicien en imagerie 2011-à ce jour</h3>
-                        <h4 className="text-center mb-3">Forces armées canadiennes, Valcartier </h4>
+                        <h3 className="card-text text-center">{t("imgtech")}</h3>
+                        <h4 className="text-center mb-3">{t("forces")}</h4>
                         <ul className="ps-5">
-                            <li>Prise des portraits officiels pour le ministère de la Défense nationale;</li>
-                            <li>Assurer la couverture médiatique des événements et exercices de la base Valcartier;</li>
-                            <li>Utiliser de l’équipement photographique et vidéo;</li>
-                            <li>Installation des éclairages lorsque nécessaire (photographique et vidéo) ;</li>
-                            <li>Effectuer la production, la création et la réalisation de projet vidéo;</li>
-                            <li>Maintenir et développer les compétences requissent sur les logiciels informatiques utilisés pour la photographie et le vidéo;</li>
-                            <li>Voir au maintien du réseau informatique de la section d’imagerie;</li>
-                            <li>Effectuer du dépannage technique lors des problèmes informatiques;</li>
-                            <li>Procéder à la réparation et à l’entretien d’équipement photographique et vidéo;</li>
-                            <li>Rechercher et archiver les travaux effectués par la section d’imagerie;</li>
-                            <li>Gérer et donner de l’instruction aux autres photographes;</li>
-                            <li>Agir comme instructeur avec support bilingue pour le cours de technicien en imagerie, donnée au niveau national;</li>
+                            <li>{t("imgtech1")}</li>
+                            <li>{t("imgtech2")}</li>
+                            <li>{t("imgtech3")}</li>
+                            <li>{t("imgtech4")}</li>
+                            <li>{t("imgtech5")}</li>
+                            <li>{t("imgtech6")}</li>
+                            <li>{t("imgtech7")}</li>
+                            <li>{t("imgtech8")}</li>
+                            <li>{t("imgtech9")}</li>
+                            <li>{t("imgtech10")}</li>
+                            <li>{t("imgtech11")}</li>
+                            <li>{t("imgtech12")}</li>
                         </ul>
                     </div>
                 </div>
@@ -51,17 +44,17 @@ import imgPhotographe from "../../images/Me.jpg";
                 <div className="card col row align-content-center" >
                     <img src={imgFantassin} className="card-img-top img-resume-fantassin align-self-center" alt="" />
                     <div className="card-body body-resume">
-                        <h3 className="card-text text-center">Fantassin et chef d’équipage 2000-2011</h3>
-                        <h4 className="text-center mb-3">Forces armées canadiennes, Valcartier </h4>
+                        <h3 className="card-text text-center">{t("fantassin")}</h3>
+                        <h4 className="text-center mb-3">{t("forces")}</h4>
                         <ul className="ps-5">
-                            <li>Superviser une équipe et procéder à de la gestion administrative du personnel ;</li>
-                            <li>Gérer une équipe, opérer et assurer l’entretien d’un véhicule blindé ;</li>
-                            <li>Effectuer des tâches de contrôle de foules sur des périmètres sécurisés</li>
-                            <li>Effectuer des barrages routiers, patrouiller des secteurs à risque et coordonner des offensives ciblées pour assurer la sécurité d’un secteur ;</li>
-                            <li>Répondre aux alertes et urgences en tant que force de réaction rapide ;</li>
-                            <li>Prodiguer les premiers soins lorsque nécessaire et au besoin alerter la police, les pompiers ou les ambulanciers ;</li>
-                            <li>Travailler sous des conditions de stress intense, avec des horaires variables et sur appel ;</li>
-                            <li>Utiliser du matériel de communications crypté et sécurisé à la fine pointe de la technologie ;</li>
+                            <li>{t("fant1")}</li>
+                            <li>{t("fant2")}</li>
+                            <li>{t("fant3")}</li>
+                            <li>{t("fant4")}</li>
+                            <li>{t("fant5")}</li>
+                            <li>{t("fant6")}</li>
+                            <li>{t("fant7")}</li>
+                            <li>{t("fant8")}</li>
                         </ul>
                     </div>
                 </div>
@@ -69,19 +62,19 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Formation professionnelle </h3>
-                    <h4 className="text-center mb-3">(Formations données par les Forces armées canadiennes) </h4>
+                    <h3 className="card-text text-center my-4">{t("formpro")} </h3>
+                    <h4 className="text-center mb-3">({t("formprocomp")}) </h4>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <li>Cours de représentant des affaires publiques</li>
-                            <li>Cours de technicien en imagerie (photo et vidéo)</li>
-                            <li>Cours de chef d’équipage</li>
-                            <li>Cours de superviseur (Alcool, drogues et jeux)</li>
-                            <li>Cours de résolution de conflits</li>
-                            <li>Cours de leadership</li>
-                            <li>Cours de patrouilleur de reconnaissance</li>
-                            <li>Cours de premiers soins et RCR</li>
-                            <li>Cours de Fantassin</li>
+                            <li>{t("formpro1")}</li>
+                            <li>{t("formpro2")}</li>
+                            <li>{t("formpro3")}</li>
+                            <li>{t("formpro4")}</li>
+                            <li>{t("formpro5")}</li>
+                            <li>{t("formpro6")}</li>
+                            <li>{t("formpro7")}</li>
+                            <li>{t("formpro8")}</li>
+                            <li>{t("formpro9")}</li>
                         </ul>
                     </div>
                 </div>
@@ -89,12 +82,12 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Formation académique </h3>
+                    <h3 className="card-text text-center my-4">{t("formacad")}</h3>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <li>Attestation d’étude collégiale – Développement Web (en cours) 2022</li>
+                            <li>{t("formacad1")}</li>
                             <p>Cégep Garneau</p>
-                            <li>Diplôme d’études secondaires 1997</li>
+                            <li>{t("formacad2")}</li>
                             <p>Polyvalente Charles-Gravel</p>
                         </ul>
                     </div>
@@ -103,13 +96,13 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Compétences</h3>
+                    <h3 className="card-text text-center my-4">{t("comp")}</h3>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <li>Bilingue (anglais et français)</li>
-                            <li>Instructeur snowboard niveau 1</li>
-                            <li>Développement web et programmation (HTML5, CSS3, JavaScript, JQuery, SQL, PHP, React)</li>
-                            <li>Excellentes connaissances informatiques : Suite Microsoft (Word, Excel, PowerPoint, Outlook), Suite Adobe (Photoshop, Lightroom, Illustrator, Premier Pro, After Effects, Audible), plateforme de streaming (OBS, YouTube, Facebook, Twitch)</li>
+                            <li>{t("comp1")}</li>
+                            <li>{t("comp2")}</li>
+                            <li>{t("comp3")}</li>
+                            <li>{t("comp4")}</li>
                         </ul>
                     </div>
                 </div>
@@ -117,14 +110,14 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Traits personnels</h3>
+                    <h3 className="card-text text-center my-4">{t("trait")}</h3>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <li>Autonome</li>
-                            <li>Résolution de problèmes</li>
-                            <li>Travail d’équipe</li>
-                            <li>Flexibilité et capacité d’adaptation</li>
-                            <li>Gestion du stress</li>
+                            <li>{t("trait1")}</li>
+                            <li>{t("trait2")}</li>
+                            <li>{t("trait3")}</li>
+                            <li>{t("trait4")}</li>
+                            <li>{t("trait5")}</li>
                         </ul>
                     </div>
                 </div>
@@ -132,14 +125,14 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Activités et loisirs</h3>
+                    <h3 className="card-text text-center my-4">{t("loisirs")}</h3>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
-                            <li>Snowboard</li>
-                            <li>vélo montagne</li>
-                            <li>escalade</li>
-                            <li>course</li>
-                            <li>crossfit</li>
+                            <li>{t("loisirs1")}</li>
+                            <li>{t("loisirs2")}</li>
+                            <li>{t("loisirs3")}</li>
+                            <li>{t("loisirs4")}</li>
+                            <li>{t("loisirs5")}</li>
                         </ul>
                     </div>
                 </div>
@@ -147,7 +140,7 @@ import imgPhotographe from "../../images/Me.jpg";
 
             <div className="resumeContainer-small">
                 <div className="card col row align-content-center" >
-                    <h3 className="card-text text-center my-4">Missions à l’étranger</h3>
+                    <h3 className="card-text text-center my-4">{t("missions")}</h3>
                     <div className="card-body body-resume my-0">
                         <ul className="ps-5">
                             <li>Op Athena – Afghanistan 2004, 2007 et 2009</li>
@@ -160,4 +153,4 @@ import imgPhotographe from "../../images/Me.jpg";
     )
 }
 
-export default ResumeCard
+export default withTranslation()(ResumeCard)

@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation, withTranslation } from "react-i18next";
 
 interface Props {
     source: any,
@@ -12,16 +13,18 @@ interface Props {
 }
 
 const ProjectCard = ( props: Props ) => {
+    const { t } = useTranslation("projectCard")
+
     return (
         <div className="projectContainer col-6">
             <div className="card col row align-content-center" >
                 <img src={props.source} className="card-img-top img-project align-self-center" alt="" />
                 <div className="card-body body-project">
-                    <p><b>Projet : </b>{props.project}</p>
-                    <p><b>Cours : </b>{props.cours}</p>
-                    <p><b>Note : </b>{props.note}%</p>
-                    <p><b>Technologie : </b>{props.techno}</p>
-                    <p><b>Lien : </b>{props.lien}</p>
+                    <p><b>{t("projet")} </b>{props.project}</p>
+                    <p><b>{t("cours")} </b>{props.cours}</p>
+                    <p><b>{t("note")} </b>{props.note}%</p>
+                    <p><b>{t("techno")} </b>{props.techno}</p>
+                    <p><b>{t("lien")} </b>{props.lien}</p>
                     <p><b>Git : </b><a href={props.git}>{props.git}</a></p>
                 </div>
             </div>
@@ -29,5 +32,5 @@ const ProjectCard = ( props: Props ) => {
     )
 }
 
-export default ProjectCard
+export default withTranslation("projectCard")(ProjectCard)
 

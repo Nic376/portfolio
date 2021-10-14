@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import phone from "../images/smartphone-153650.svg"
 import courriel from "../images/letter-147697.svg"
 import ContactCard from "../main/components/ContactCard";
+import { useTranslation, withTranslation } from "react-i18next";
+
 
 interface Props {
     theme: SupportedThemes
@@ -13,23 +15,25 @@ interface Props {
 
 
 const ContactScreen = (props: Props) => {
-    const phoneText = "La meilleur façon de me rejoindre c'est de me contacter directement par telephone"
-    const emailText = "Vous pouvez aussi prendre la chance de m'envoyer un courriel"
+    const { t } = useTranslation("pageContact")
+    const phoneText = t("phoneText")
+    const emailText = t("emailText")
 
     return (
         <div className="blur-bg text-center height-vh">
-    
-            <h1 className="py-5 text-center ">Me contacter</h1>
+            <div className="paddingtop">
+                <h1 className="pt-5 text-center color-text">{t("contact")}</h1>
           
-            <div className="wrapper text-center ">
-                <h2>Nicolas Tremblay</h2>
-                <div className="contactMargin">
-                    <ContactCard source={phone} titre="581-996-5716" texte={phoneText} styleClass="card-img-top img-contact-phone" />
-                </div>
-                <div className="courrielMargin">
-                    <ContactCard source={courriel} titre="Nick376@hotmail.fr" texte={emailText} styleClass="card-img-top img-contact-courriel" />
+                <div className="wrapper text-center ">
+                    <div className="contactMargin">
+                        <ContactCard source={phone} titre="581-996-5716" texte={phoneText} styleClass=" img-contact-phone" styleNumero="numero cellNumber"/>
+                    </div>
+                    <div className="courrielMargin">
+                        <ContactCard source={courriel} titre="Nick376@hotmail.fr" texte={emailText} styleClass=" img-contact-courriel" styleNumero="numero" />
+                    </div>
                 </div>
             </div>
+            
         </div>
     )
 }
@@ -40,4 +44,4 @@ const mapStateToProps = (state: any) => {
     }
 }
 
-export default connect(mapStateToProps, () => {})(ContactScreen)
+export default connect(mapStateToProps, () => {})(withTranslation("pageContact")(ContactScreen))
