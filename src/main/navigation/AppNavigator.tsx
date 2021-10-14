@@ -7,6 +7,7 @@ import ResumeScreen from "../../Pages/Resume"
 import { connect } from "react-redux"
 import { getTheme } from "../Theme/selectors/themeSelector";
 import { SupportedThemes } from "../components/ThemeSelect";
+import AProposScreen from "../../Pages/Apropos"
 
 interface Props {
     theme: SupportedThemes,
@@ -16,6 +17,7 @@ const AppNavigator = (props: Props) => {
 
     return (
         <Switch>
+
             <Route exact path="/">
                     <PresentationScreen />
             </Route>
@@ -28,9 +30,14 @@ const AppNavigator = (props: Props) => {
                     <ProjetsScreen />
             </Route>
 
+            <Route exact path="/apropos">
+                    <AProposScreen />
+            </Route>
+
             <Route exact path="/contact">
                     <ContactScreen />
             </Route>
+
         </Switch>
     )
 }

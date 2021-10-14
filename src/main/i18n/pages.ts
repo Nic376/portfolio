@@ -8,6 +8,10 @@ const translation  = {
         pagePresentation: {
             portfolio: "Mon Portfolio,",
             univers: "et un Univers à découvrir",
+            resume:"Mon CV",
+            projets:"Projets",
+            apropos: "À propos",
+            contact: "Contact"
         },
         pageResume:{
             h1: "Mon curriculum vitae",
@@ -74,6 +78,12 @@ const translation  = {
             techno: "Technologie :",
             lien: "Lien :"
         },
+        header: {
+            resume:"Mon CV",
+            projets:"Projets",
+            apropos: "À propos",
+            contact: "Contact"
+        }
     },
     en: {
         pageContact: {
@@ -84,6 +94,10 @@ const translation  = {
         pagePresentation: {
             portfolio: "My Portfolio,",
             univers: "and a Universe to discover",
+            resume:"Resume",
+            projets:"Projects",
+            apropos: "About me",
+            contact: "Contact"
         },
         pageResume: {
             h1: "My resume",
@@ -151,6 +165,12 @@ const translation  = {
             techno: "Technology :",
             lien: "Link :"
         },
+        header: {
+            resume:"Resume",
+            projets:"Projects",
+            apropos: "About me",
+            contact: "Contact"
+        }
     }
 }
 

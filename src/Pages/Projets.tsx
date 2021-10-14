@@ -2,6 +2,7 @@ import React from "react"
 import ProjectCard from "../main/components/ProjectCard"
 import img1 from "../images/site_DonjonsDragons.jpg"
 import img2 from "../images/Quiz.jpg"
+import img3 from "../images/Pogsicle.jpg"
 import img4 from "../images/Site_de_chien.jpg"
 import img5 from "../images/sn_Appchat.jpg"
 import img6 from "../images/Faitmonmenage.jpg"
@@ -14,13 +15,9 @@ import img8 from "../images/Liste.jpg"
 const ProjetsScreen = () => {
 
         return (
-            <div className="blur-bg">
-                <div className="mb-5 wrapper row gx-5 h-100 paddingtop">
-                    <h1 className="py-5 text-center color-text">Mes projets</h1>
-
-                    {/* {projects.map((project: any) => (
-                        <ProjectCard source={nextImg(project)} project={project.project} cours={project.cours} note={project.note} techno={project.techno} lien={project.lien} git={project.git} />
-                    ))} */}
+            <div className="blur-bg py-5">
+                <div className="pb-5 wrapper row gx-5 h-100 paddingtop">
+                    <h1 className="pt-5 text-center color-text">Mes projets</h1>
 
                     <ProjectCard 
                         source={img1}
@@ -28,7 +25,6 @@ const ProjetsScreen = () => {
                         cours="Intégration 2"
                         note="107.5"
                         techno="Bootstrap"
-                        lien="https://gitlab.com/Nicolas_Tremblay/tp2-intg2.git"
                         git="https://gitlab.com/Nicolas_Tremblay/tp2-intg2.git"
                     />
 
@@ -38,18 +34,16 @@ const ProjetsScreen = () => {
                         cours="Intégration 2"
                         note="95"
                         techno="Jquery"
-                        lien="https://gitlab.com/Nicolas_Tremblay/tp3_-_quiz.git"
                         git="https://gitlab.com/Nicolas_Tremblay/tp3_-_quiz.git"
                     />
                     
                     <ProjectCard 
-                        source=""
-                        project="Travail en équie de 4 pour créer un site web de type CMS, frontend et backend"
-                        cours="Programation 2"
-                        note="96"
-                        techno="Express, MongoDB, NodeJS"
-                        lien="https://gitlab.com/Nicolas_Tremblay/tp3_jeu-de-memoire.git"
-                        git="https://gitlab.com/Nicolas_Tremblay/tp3_jeu-de-memoire.git"
+                        source={img3}
+                        project="Création d'une maquette pour un produit fictif"
+                        cours="Conception graphique et design d'interface"
+                        note="99"
+                        techno="Figma, photoshop, illustrator"
+                        git="https://www.figma.com/proto/RrZlLBiyke4dbPOwZnoWnL/TPSession01?page-id=0%3A1&node-id=80%3A1465&starting-point-node-id=80%3A1465"
                     />
                     
                     <ProjectCard 
@@ -58,7 +52,6 @@ const ProjetsScreen = () => {
                         cours="Intégration 2"
                         note="99"
                         techno="Sass, BEM, HTML"
-                        lien="https://gitlab.com/Nicolas_Tremblay/tp1-integration2.git"
                         git="https://gitlab.com/Nicolas_Tremblay/tp1-integration2.git"
                     />
                     
@@ -68,7 +61,6 @@ const ProjetsScreen = () => {
                         cours="Intégration 3"
                         note="100"
                         techno="React"
-                        lien="https://github.com/Nic376/TP2-integration.git"
                         git="https://github.com/Nic376/TP2-integration.git"
                     />
                     
@@ -78,7 +70,6 @@ const ProjetsScreen = () => {
                         cours="Projet de production 1"
                         note="90"
                         techno="Express, Mongoose"
-                        lien="https://gitlab.com/Nicolas_Tremblay/tp2-intg2.git"
                         git="https://gitlab.com/Nicolas_Tremblay/tp2-intg2.git"
                     />
                     
@@ -88,7 +79,6 @@ const ProjetsScreen = () => {
                         cours="Programation 2"
                         note="À venir"
                         techno="Php, Laravel"
-                        lien="https://nourriture-communautaire.slemay.devwebgarneau.com/"
                         git="https://gitlab.com/sam22may/tp3_prog_food.git"
                     />
                     
@@ -98,7 +88,6 @@ const ProjetsScreen = () => {
                         cours="Intégration 2"
                         note="100"
                         techno="VueJs, Python"
-                        lien=""
                         git="https://gitlab.com/sam22may/tp4-liste-epicerie"
                     />
                 

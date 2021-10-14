@@ -7,7 +7,6 @@ interface Props {
     cours: string,
     note: string,
     techno: string,
-    lien: string,
     git: string
 
 }
@@ -24,7 +23,6 @@ const ProjectCard = ( props: Props ) => {
                     <p><b>{t("cours")} </b>{props.cours}</p>
                     <p><b>{t("note")} </b>{props.note}%</p>
                     <p><b>{t("techno")} </b>{props.techno}</p>
-                    <p><b>{t("lien")} </b>{props.lien}</p>
                     <p><b>Git : </b><a href={props.git}>{props.git}</a></p>
                 </div>
             </div>

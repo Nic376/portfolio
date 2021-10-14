@@ -8,6 +8,8 @@ import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 import { toggleTheme } from '../Theme/actions/themeActions';
 import { getTheme } from '../Theme/selectors/themeSelector';
+import pastilleBleu from "../../images/Pastille bleu.png"
+import pastilleJaune from "../../images/pastille jaune.png"
 
 export enum SupportedThemes {
     LIGHT = "LIGHT",
@@ -55,8 +57,8 @@ const ThemeSelect = (props: Props) => {
     }
   
     return (
-      <div className="row theme-div">
-        <Button sx={{ mt: 2 }} onClick={handleOpen} className="theme-button">
+      <div className="row theme-div d-flex justify-content-center">
+        <Button sx={{ mt: 2 }} onClick={handleOpen} className="theme-button text-white">
           Thème
         </Button>
         <FormControl className="theme-form ">
@@ -72,8 +74,8 @@ const ThemeSelect = (props: Props) => {
             onChange={handleChange}
             sx={{ height: 50 }}
           >
-            <MenuItem value={SupportedThemes.LIGHT}>Light</MenuItem>
-            <MenuItem value={SupportedThemes.DARK}>Dark</MenuItem>
+            <MenuItem value={SupportedThemes.LIGHT}><img src={pastilleJaune} alt="" className="pastille "/></MenuItem>
+            <MenuItem value={SupportedThemes.DARK}><img src={pastilleBleu} alt="" className="pastille "/></MenuItem>
           </Select>
         </FormControl>
       </div>
