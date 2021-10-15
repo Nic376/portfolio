@@ -12,7 +12,7 @@ const PresentationScreen = () => {
 
     return (
         <div className="presentation-bg">
-            <div className="text-white text-center paddingtop">
+            <div className="text-center paddingtop constellation-textshadow">
                 <h1 className="pt-5">Nicolas Tremblay</h1>
                 <h2 className="mt-3">{t("portfolio")} </h2>
                 <h3>{t("univers")}</h3>

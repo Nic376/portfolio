@@ -14,9 +14,9 @@ const AProposScreen = () => {
     return (
         <div className="blur-bg py-5 row d-flex justify-content-center">
 
-            <div className="pb-5 wrapper row gx-5 d-flex justify-content-center paddingtop h-100">
-                <h1 className="pt-5 text-center color-text">À propos</h1>
-                <div className="col-10">
+            <div className="pb-5 wrapper row gx-5 d-flex justify-content-center paddingtop">
+                <h1 className="py-5 text-center color-text">À propos</h1>
+                <div className="col-10 paddingtop">
                     <div className="card col row align-content-center" >
 
                         <img src={portrait} className="card-img-top img-project align-self-center w-50 " alt=""/>

@@ -13,6 +13,7 @@ a {
 h1{
     font-family: 'DM Serif Display', serif;
     font-size: 64px;
+    filter: drop-shadow(5px 5px 15px var(--primary));
 }
 
 h2{
@@ -177,6 +178,11 @@ h2{
 
 .theme-select {
     background-color: red;
+}
+
+.constellation-textshadow {
+    filter: drop-shadow(0 0 15px #E0A451);
+    color: #fff;
 }
 
 .constellation {
